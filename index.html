@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Knytor Technologies is a premier IT firm specializing in mobile apps, custom web applications, web scraping, data engineering, and data analysis. We also host advanced internship programs in Python and Node.js.">
+  <title>Knytor Technologies | Engineering the Future of Data & Digital Platforms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background Graphics -->
+  <canvas id="canvas-background"></canvas>
+  <div class="glow-orb orb-violet"></div>
+  <div class="glow-orb orb-cyan"></div>
+
+  <!-- Custom Cursor Follower -->
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Header Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <div class="logo">Knytor</div>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#hero">Home</a></li>
+        <li class="nav-item"><a href="#vision">Vision</a></li>
+        <li class="nav-item"><a href="#services">Services</a></li>
+        <li class="nav-item"><a href="#features">Features</a></li>
+        <li class="nav-item"><a href="#internships">Internships</a></li>
+        <li class="nav-item"><a href="#faq">FAQ</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+            <!-- Sun Icon (hidden in dark mode) -->
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="4" />
+              <line x1="12" y1="20" x2="12" y2="24" />
+              <line x1="1" y1="12" x2="4" y2="12" />
+              <line x1="20" y1="12" x2="24" y2="12" />
+              <line x1="4.22" y1="4.22" x2="7.05" y2="7.05" />
+              <line x1="16.95" y1="16.95" x2="19.78" y2="19.78" />
+              <line x1="4.22" y1="19.78" x2="7.05" y2="16.95" />
+              <line x1="16.95" y1="4.22" x2="19.78" y2="7.05" />
+            </svg>
+            <!-- Moon Icon (visible in dark mode) -->
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 1-10-10z" />
+            </svg>
+          </button>
+        </li>
+        <li class="nav-item"><button class="nav-cta" onclick="window.location.href='#contact'">Get Started</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="section-tag">Empowering Digital Evolution</span>
+          <h1>Architecting Future-Proof Apps & Intelligent Data Pipelines</h1>
+          <p class="hero-desc">
+            Knytor Technologies crafts high-performance web platforms, mobile solutions, and enterprise-grade data
+            engineering architectures that drive growth.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="window.location.href='#services'">Explore Our Services</button>
+            <button class="btn btn-secondary" onclick="window.location.href='#internships'">View Internships</button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="hero_graphic.png" alt="Futuristic Tech Network Illustration" class="hero-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="scroll-reveal">
+      <div style="text-align: center;">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">Our Strategic Focus</h2>
+        <p class="section-desc" style="margin: 0 auto 50px auto;">
+          We bridge the gap between complex software engineering and actionable data intelligence.
+        </p>
+      </div>
+      <div class="vision-mission">
+        <div class="vm-card">
+          <div class="vm-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+            <span>Our Vision</span>
+          </div>
+          <p>
+            To pioneer the next frontier of intelligent software and data-driven systems, empowering companies to make
+            decisions at the speed of thought. We strive to be the global benchmark for technical excellence, creating
+            solutions that seamlessly scale.
+          </p>
+        </div>
+        <div class="vm-card">
+          <div class="vm-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span>Our Mission</span>
+          </div>
+          <p>
+            To deliver outstanding mobile applications, robust websites, and highly resilient web scraping solutions,
+            combined with state-of-the-art data engineering. We commit to shaping the developers of tomorrow through
+            hands-on, elite internship programs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="scroll-reveal">
+      <span class="section-tag">Our Expertise</span>
+      <h2 class="section-title">End-to-End Technical Capabilities</h2>
+      <p class="section-desc">
+        We build premium digital solutions engineered for speed, scalability, and absolute precision.
+      </p>
+      <div class="services-grid">
+        <!-- Service: Web Development -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="web_app_graphic.png" alt="Websites & Web Apps Illustration" class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2.9" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <div class="service-name">Websites & Web Apps</div>
+          <p>
+            High-speed, search-engine-optimized, and premium web platforms developed using modern structural
+            architectures. We emphasize rich interactive styling and flawless responsive behavior.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">HTML5</span>
+            <span class="service-tag-item">Vanilla JS</span>
+            <span class="service-tag-item">CSS Grid</span>
+            <span class="service-tag-item">SPA Architecture</span>
+          </div>
+        </div>
+
+        <!-- Service: Mobile Apps -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="mobile_app_graphic.png" alt="Mobile App Engineering Illustration" class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
+              <circle cx="12" cy="18" r="1" />
+            </svg>
+          </div>
+          <div class="service-name">Mobile App Engineering</div>
+          <p>
+            Native and cross-platform mobile solutions engineered for fluid performance, native API integration, and
+            breathtaking user interfaces.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">iOS</span>
+            <span class="service-tag-item">Android</span>
+            <span class="service-tag-item">Cross-Platform</span>
+            <span class="service-tag-item">Fluid UX</span>
+          </div>
+        </div>
+
+        <!-- Service: Web Scraping -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="web_scraping.png" alt="Advanced Web Scraping Illustration" class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="5" r="4" />
+              <circle cx="5" cy="18" r="4" />
+              <circle cx="19" cy="18" r="4" />
+              <line x1="12" y1="9" x2="5" y2="14" />
+              <line x1="12" y1="9" x2="19" y2="14" />
+            </svg>
+          </div>
+          <div class="service-name">Advanced Web Scraping</div>
+          <p>
+            Robust web scrapers designed to bypass anti-bot challenges. We extract complex datasets at scale while
+            ensuring data structures remain clean and ready for analysis.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">Proxy Rotation</span>
+            <span class="service-tag-item">Anti-Bot Bypass</span>
+            <span class="service-tag-item">JSON Output</span>
+            <span class="service-tag-item">Automation</span>
+          </div>
+        </div>
+
+        <!-- Service: Data Engineering -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="data_engineering_graphic.png" alt="Data Engineering Illustration" class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="8" ry="4" />
+              <ellipse cx="12" cy="12" rx="8" ry="4" />
+              <ellipse cx="12" cy="19" rx="8" ry="4" />
+              <line x1="4" y1="5" x2="4" y2="19" />
+              <line x1="20" y1="5" x2="20" y2="19" />
+            </svg>
+          </div>
+          <div class="service-name">Data Engineering</div>
+          <p>
+            ETL pipeline construction, data warehousing, and structured database design. We build high-throughput
+            channels that clean and aggregate massive information flows.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">ETL Pipelines</span>
+            <span class="service-tag-item">Data Warehouses</span>
+            <span class="service-tag-item">Postgres</span>
+            <span class="service-tag-item">Schema Design</span>
+          </div>
+        </div>
+
+        <!-- Service: Data Collection -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="data_collection_graphic.png" alt="Data Collection for Analysis Illustration"
+              class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M2 10h6l2 2h4l2-2h6" />
+              <polyline points="8 12 12 16 16 12" />
+              <line x1="12" y1="4" x2="12" y2="12" />
+            </svg>
+          </div>
+          <div class="service-name">Data Collection for Analysis</div>
+          <p>
+            Continuous polling systems and raw feed ingestion scripts designed to capture customer sentiments, market
+            fluctuations, and system events for analytical processing.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">Real-Time Ingestion</span>
+            <span class="service-tag-item">Feed Aggregation</span>
+            <span class="service-tag-item">Event Tracking</span>
+            <span class="service-tag-item">Big Data Prep</span>
+          </div>
+        </div>
+
+        <!-- Service: Data Analysis -->
+        <div class="service-card">
+          <div class="service-card-image-wrapper">
+            <img src="data_analytics_graphic.png" alt="Data Analytics & Reports Illustration"
+              class="service-card-image">
+          </div>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </div>
+          <div class="service-name">Data Analytics & Reports</div>
+          <p>
+            Turn raw databases into actionable metrics. We build interactive analytical models and charts that reveal
+            business bottlenecks and user trends.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag-item">Statistical Modeling</span>
+            <span class="service-tag-item">Trend Forecasting</span>
+            <span class="service-tag-item">Business Intel</span>
+            <span class="service-tag-item">Dashboards</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features & Benefits Section -->
+    <section id="features" class="scroll-reveal">
+      <div class="features-container">
+        <div>
+          <span class="section-tag">Our Engineering Values</span>
+          <h2 class="section-title">Why Industry Leaders Partner with Knytor</h2>
+          <p class="section-desc">
+            We deliver robust systems by prioritizing code performance, resilient pipelines, and secure storage models.
+          </p>
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-number">A</div>
+              <div class="feature-text">
+                <h4 class="feature-title">Ultra-Low Latency Standards</h4>
+                <p>All mobile and web applications are optimized to achieve near-instantaneous page paint and rendering,
+                  keeping your users engaged.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-number">B</div>
+              <div class="feature-text">
+                <h4 class="feature-title">Self-Healing Data Collection</h4>
+                <p>Our web scraping and data harvesting engines monitor structural changes on source websites,
+                  auto-adjusting requests to prevent downtime.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-number">C</div>
+              <div class="feature-text">
+                <h4 class="feature-title">Strict Privacy & Security</h4>
+                <p>We deploy end-to-end encryption across all data pipelines and static storages, fully securing
+                  proprietary user records.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-number">D</div>
+              <div class="feature-text">
+                <h4 class="feature-title">Synergistic Intern Innovation</h4>
+                <p>Our elite interns contribute fresh concepts under the direct supervision of veteran technical
+                  architects, bringing high agility to our teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="features-visual">
+          <div class="visual-element" style="width: 280px; height: 280px;"></div>
+          <div class="visual-element" style="width: 220px; height: 220px; animation-direction: reverse;"></div>
+          <div class="visual-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+            <span>Knytor Core</span>
+            <small
+              style="color: var(--color-secondary); font-size: 0.75rem; margin-top: 5px; font-weight: 600;">HIGH-PERFORMANCE</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internship Programs Section -->
+    <section id="internships" class="scroll-reveal">
+      <span class="section-tag">Grow With Us</span>
+      <h2 class="section-title">Elite Internship Cohorts</h2>
+      <p class="section-desc">
+        We train future software pioneers through intensive, hands-on internships. Learn from senior staff and work on
+        live client projects.
+      </p>
+      <div class="internship-cards">
+        <!-- Python Internship -->
+        <div class="internship-card">
+          <h4 class="internship-role">Python Developer Track</h4>
+          <div class="internship-meta">
+            <span>Remote / Hybrid</span>
+          </div>
+          <p>
+            Master backend scripting, automation, API building, and data aggregation. Build scalable server applications
+            and database integrations.
+          </p>
+          <div class="internship-skills">
+            <span class="internship-skill-tag">FastAPI</span>
+            <span class="internship-skill-tag">Pandas</span>
+            <span class="internship-skill-tag">Scrapy</span>
+            <span class="internship-skill-tag">SQLAlchemy</span>
+          </div>
+          <button class="internship-btn" onclick="window.location.href='#contact'">Apply For Track</button>
+        </div>
+
+        <!-- Node.js Internship -->
+        <div class="internship-card cyan">
+          <h4 class="internship-role">Node.js Developer Track</h4>
+          <div class="internship-meta">
+            <span>Remote / Hybrid</span>
+          </div>
+          <p>
+            Build real-time servers, custom API endpoints, and asynchronous workflows. Focus on event-driven loop
+            optimization and scalable database interactions.
+          </p>
+          <div class="internship-skills">
+            <span class="internship-skill-tag">Express</span>
+            <span class="internship-skill-tag">WebSockets</span>
+            <span class="internship-skill-tag">Redis</span>
+            <span class="internship-skill-tag">Postgres</span>
+          </div>
+          <button class="internship-btn" onclick="window.location.href='#contact'">Apply For Track</button>
+        </div>
+
+        <!-- Web Scraping Internship -->
+        <div class="internship-card">
+          <h4 class="internship-role">Web Scraping Developer Track</h4>
+          <div class="internship-meta">
+            <span>Remote / Hybrid</span>
+          </div>
+          <p>
+            Master automated data harvesting, web parsing, proxy rotation, and bypass architectures. Design scripts to
+            retrieve web data at scale.
+          </p>
+          <div class="internship-skills">
+            <span class="internship-skill-tag">BeautifulSoup</span>
+            <span class="internship-skill-tag">Playwright</span>
+            <span class="internship-skill-tag">Scrapy</span>
+            <span class="internship-skill-tag">Puppeteer</span>
+          </div>
+          <button class="internship-btn" onclick="window.location.href='#contact'">Apply For Track</button>
+        </div>
+
+        <!-- Full Stack Internship -->
+        <div class="internship-card cyan">
+          <h4 class="internship-role">Full Stack Developer Track</h4>
+          <div class="internship-meta">
+            <span>Remote / Hybrid</span>
+          </div>
+          <p>
+            Construct complete web applications from database schemas to interactive client interfaces. Learn state
+            management and server-side logic.
+          </p>
+          <div class="internship-skills">
+            <span class="internship-skill-tag">React</span>
+            <span class="internship-skill-tag">Node.js</span>
+            <span class="internship-skill-tag">Express</span>
+            <span class="internship-skill-tag">Postgres</span>
+          </div>
+          <button class="internship-btn" onclick="window.location.href='#contact'">Apply For Track</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="scroll-reveal">
+      <div style="text-align: center;">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc" style="margin: 0 auto 50px auto;">
+          Everything you need to know about our web engineering, data pipelines, and internship pathways.
+        </p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What core services does Knytor Technologies provide?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We specialize in custom web applications, fluid mobile apps, high-throughput web scraping systems, and
+              end-to-end data engineering and analytics setup. We build everything with a strong focus on system
+              performance and security.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do you handle web scraping for sites with anti-bot shields?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We write custom navigation routines that simulate human interaction patterns. Combined with
+              enterprise-grade proxy distribution networks and request rate scaling, our systems bypass scraping blocks
+              seamlessly.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Who is eligible to apply for your development internships?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We accept students and self-taught developers who possess a solid grasp of core programming logic (either
+              in JavaScript or Python). Successful candidates undergo a technical review before joining our development
+              teams.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does Knytor Technologies take on custom data analysis projects?</span>
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Absolutely. We help businesses ingest raw logs, clean data fields, perform mathematical analytics, and
+              compile reporting dashboards. Let us know your data targets through our contact form.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-reveal">
+      <span class="section-tag">Let's Connect</span>
+      <h2 class="section-title">Initiate Your Project or Application</h2>
+      <p class="section-desc">
+        Contact us to request a project quote or submit your details for our upcoming developer internship cohorts.
+      </p>
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="site-contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="form-purpose" class="form-label">Purpose</label>
+              <select id="form-purpose" class="form-control" style="background: #0d0e1a;" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="client">Request Project Services</option>
+                <option value="intern-python">Python Internship Track</option>
+                <option value="intern-node">Node.js Internship Track</option>
+                <option value="intern-scraping">Web Scraping Internship Track</option>
+                <option value="intern-fullstack">Full Stack Internship Track</option>
+                <option value="other">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-msg" class="form-label">Your Message</label>
+              <textarea id="form-msg" class="form-control"
+                placeholder="Tell us about your project requirements or background..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+          <div class="form-success-message" id="form-success">
+            Thank you! Your message has been sent successfully. Our team will contact you soon.
+          </div>
+        </div>
+
+        <!-- Contact Info & Socials -->
+        <div class="contact-info">
+          <div class="info-cards">
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 6l-10 7L2 6" />
+                </svg>
+              </div>
+              <div class="info-details">
+                <h4 class="info-title">Electronic Mail</h4>
+                <a href="mailto:hello@knytor.com">hello@knytor.com</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="6" y="2" width="12" height="20" rx="2" ry="2" />
+                  <circle cx="12" cy="18" r="1" />
+                </svg>
+              </div>
+              <div class="info-details">
+                <h4 class="info-title">Direct Connection</h4>
+                <a href="tel:+15550184">+1 (555) 0184</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2" />
+                  <rect x="10" y="14" width="4" height="8" />
+                  <line x1="8" y1="6" x2="10" y2="6" />
+                  <line x1="14" y1="6" x2="16" y2="6" />
+                  <line x1="8" y1="10" x2="10" y2="10" />
+                  <line x1="14" y1="10" x2="16" y2="10" />
+                </svg>
+              </div>
+              <div class="info-details">
+                <h4 class="info-title">Headquarters</h4>
+                <p>124 Innovation Parkway, Suite A<br>Silicon Valley, CA, USA</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="info-title" style="margin-bottom: 15px;">Follow Knytor Technologies</h4>
+            <div class="social-links">
+              <a href="#" class="social-icon" aria-label="Github"><svg width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="8 4 2 12 8 20" />
+                  <polyline points="16 4 22 12 16 20" />
+                  <line x1="14" y1="4" x2="10" y2="20" />
+                </svg></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Knytor Technologies</span>
+        <p>
+          Next-generation software platforms, mobile applications, web scraping systems, and data pipelines built for
+          high efficiency.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-links-title">Quick Navigation</h4>
+        <ul class="footer-links-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#internships">Internships</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-links-title">Legal & Contact</h4>
+        <ul class="footer-links-list">
+          <li><a href="#contact">Contact Support</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie settings</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Knytor Technologies. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <p>Registered Office: knytor technoloies</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
